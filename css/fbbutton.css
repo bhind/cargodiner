@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+/* 
+ * refference: http://nicolasgallagher.com/lab/css3-facebook-buttons/
+ */
+button.fbbutton {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #29447E #29447E #1A356E;
+	padding: 4px;
+	color: #FFFFFF;
+	margin: 0;
+	text-align: center;
+	font: bold 11px/normal 'lucida grande', tahoma, verdana, arial, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+	background-color: #5B74A8;
+	background-image: -webkit-garadient(linear, 0 0, 0 100%, from(#637BAD), to(#5872A7));
+	background-image: -moz-linear-gradient(#637BAD,#5872A7);
+	background-image: -o-linear-gradient(#637BAD,#5872A7);
+	background-image: linear gradient(#637BAD,#5872A7);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#637BAD',EndColorStr='#5872A7');
+	-webkit-boxshadow: 0 1px 0 rgba(0,0,0,0.1), inset 0 1px 0 #8A9CC2;
+	-moz-box-shadow: 0 1px 0 rgba(0,0,0,0.1), inset 0 1px 0 #8A9CC2;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.1), inset 0 1px 0 #8A9CC2;
+	zoom: 1;
+	*display: inline;
+}
+
+button.fbbutton:hover, button.fbbutton:focus{
+	border-color: #777777 #777777 #666666;
+}
+button.fbbutton:active {
+	border-color: #29447E;
+	background: #4F6AA3;
+	filter: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}

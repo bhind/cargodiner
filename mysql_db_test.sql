@@ -1,0 +1,19 @@
+ create table profile (
+ id VARCHAR(128) NOT NULL PRIMARY KEY,
+ fb_id VARCHAR(128) NOT NULL,
+ pair_id VARCHAR(128),
+ create_date TIMESTAMP NOT NULL DEFAULT '0000-00-00 00:00:00',
+ modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ INDEX fb_id_ind(fb_id)
+ ) engine=InnoDB;
+ 
+ create table fbprofile (
+ id VARCHAR(128) NOT NULL PRIMARY KEY,
+ name VARCHAR(1024),
+ gender VARCHAR(32),
+ age_range VARCHAR(32),
+ create_date TIMESTAMP NOT NULL DEFAULT '0000-00-00 00:00:00',
+ modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ FOREIGN KEY(id) REFERENCES profile(fb_id) ON DELETE CASCADE
+ ) engine=InnoDB;
+ 
